@@ -13,32 +13,42 @@ export default function Index() {
         const {trackId, trackName, artistName, artworkUrl100, previewUrl, trackViewUrl} = track;
         return (
             <div className="track" key={trackId}>
-                <div className="artwork">
-                    <a href={trackViewUrl} target="_blank">
-                        <img src={artworkUrl100} />
-                    </a>
+                <div className="details">
+                    <div className="artwork">
+                        <a href={trackViewUrl} target="_blank">
+                            <img src={artworkUrl100} />
+                        </a>
+                    </div>
+                    <div className="info">
+                        <div className="title">{trackName}</div>
+                        <div className="artists">{artistName}</div>
+                    </div>
                 </div>
-                <div className="info">
-                    <div className="title">{trackName}</div>
-                    <div className="artists">{artistName}</div>
-                    <audio controls preload="none">
-                        <source src={previewUrl} type="audio/mpeg" />
-                    </audio>
-                </div>
+                <audio controls preload="none">
+                    <source src={previewUrl} type="audio/mpeg" />
+                </audio>
                 <style jsx>{`
                     .track {
-                        display: flex;
                         margin: 20px 0;
                         padding: 10px;
                         border: 1px solid #EEE;
                         border-radius: 4px;
                         max-width: 600px;
                         background-color: #FAFAFA;
-                        height: 100px;
+                    }
+
+                    .details {
+                        display: flex;
+                        height: 50px;
                     }
 
                     .artwork {
-                        width: 100px;
+                        width: 50px;
+                    }
+
+                    .artwork img {
+                        height: 50px;
+                        width: 50px;
                     }
 
                     .info {
@@ -47,7 +57,7 @@ export default function Index() {
                     }
 
                     .info .title {
-                        font-size: 20px;
+                        font-size: 18px;
                         margin-bottom: 5px
                     }
 
@@ -55,10 +65,10 @@ export default function Index() {
                         font-size: 15px;
                     }
 
-                    .info audio {
-                        height: 30px;
-                        margin: 25px 0 0 0;
-                        width: 150px;
+                    audio {
+                        height: 25px;
+                        margin: 15px 0 0 0;
+                        width: 100%;
                         outline: 0;
                     }
                 `}</style>
