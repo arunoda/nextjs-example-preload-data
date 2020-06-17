@@ -66,10 +66,15 @@ export default function Index() {
                     }
 
                     audio {
-                        height: 25px;
                         margin: 15px 0 0 0;
                         width: 100%;
                         outline: 0;
+                    }
+
+                    @media only screen and (min-device-width : 768px) {
+                        audio {
+                            height: 25px;
+                        }
                     }
                 `}</style>
             </div>
