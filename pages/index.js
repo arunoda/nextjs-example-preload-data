@@ -72,6 +72,11 @@ export default function Index() {
     return (
         <div className="container">
             <h1>Music by Marshmello</h1>
+            <div className="link-home">
+                <a href="https://github.com/arunoda/nextjs-example-preload-data">
+                    View Source
+                </a>
+            </div>
             <div className="tracks">
                 {tracks.map(renderTrack)}
             </div>
@@ -82,6 +87,16 @@ export default function Index() {
                 .container {
                     margin: 50px 50px;
                     font-family: Arial;
+                }
+
+                h1 {
+                    margin-bottom: 0px;
+                }
+
+                .link-home a {
+                    font-size: 12px;
+                    color: #00a3ec;
+                    text-decoration: none;
                 }
             `}</style>
         </div>
