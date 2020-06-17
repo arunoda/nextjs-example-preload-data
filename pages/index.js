@@ -85,7 +85,7 @@ export default function Index() {
         <div className="container">
             <h1>Music by Marshmello</h1>
             <div className="link-home">
-                <a href="https://github.com/arunoda/nextjs-example-preload-data">
+                <a href="https://github.com/arunoda/nextjs-example-preload-data" target="_blank">
                     View Source
                 </a>
             </div>
