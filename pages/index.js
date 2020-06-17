@@ -21,7 +21,7 @@ export default function Index() {
                 <div className="info">
                     <div className="title">{trackName}</div>
                     <div className="artists">{artistName}</div>
-                    <audio controls>
+                    <audio controls preload="none">
                         <source src={previewUrl} type="audio/mpeg" />
                     </audio>
                 </div>
@@ -82,8 +82,10 @@ export default function Index() {
                     margin: 50px 0;
                 }
                 .container {
-                    margin: 50px 50px;
+                    max-width: 500px;
+                    margin: 50px auto;
                     font-family: Arial;
+                    padding: 0 10px;
                 }
 
                 h1 {
