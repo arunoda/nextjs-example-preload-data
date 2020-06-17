@@ -1,5 +1,4 @@
 import Document, { Head, Main, NextScript } from 'next/document'
-import { searchSongsUrl } from '../lib/urls';
 
 export default class MyDocument extends Document {
   static getInitialProps (ctx) {
@@ -10,7 +9,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <link rel="preload" href={searchSongsUrl('Marshmello')} as="fetch" crossorigin="anonymous"/>
+          <link rel="preload" href="/api/search-music" as="fetch" crossorigin="anonymous"/>
         </Head>
         <body>
           <Main />

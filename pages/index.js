@@ -1,15 +1,12 @@
 import { useState, useEffect } from "react"
-import { searchSongsUrl } from '../lib/urls';
 
 export default function Index() {
     const [tracks, setTracks] = useState([]);
 
     useEffect(() => {
-        fetch(searchSongsUrl('Marshmello'))
+        fetch(`/api/search-music`)
             .then(res => res.json())
-            .then(d => {
-                setTracks(d.results.filter(t => t.kind === 'song'))
-            })
+            .then(result => setTracks(result))
     }, [])
 
     const renderTrack = (track) => {
