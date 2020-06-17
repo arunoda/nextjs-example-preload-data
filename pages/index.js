@@ -100,6 +100,7 @@ export default function Index() {
 
                 h1 {
                     margin-bottom: 0px;
+                    font-size: 28px;
                 }
 
                 .link-home a {
