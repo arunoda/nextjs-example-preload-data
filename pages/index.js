@@ -58,7 +58,7 @@ export default function Index() {
                     .info audio {
                         height: 30px;
                         margin: 25px 0 0 0;
-                        width: 250px;
+                        width: 150px;
                         outline: 0;
                     }
                 `}</style>
